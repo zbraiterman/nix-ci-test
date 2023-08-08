@@ -7,7 +7,7 @@ stdenv.mkDerivation {
       nodejs
     ];
     installPhase = ''
-      npm install
+      npm install --verbose
       touch $out
     '';
 }
