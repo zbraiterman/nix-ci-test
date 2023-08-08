@@ -7,7 +7,6 @@ stdenv.mkDerivation {
       nodejs
     ];
     installPhase = ''
-      export HOME=$(pwd)
       npm install
       touch $out
     '';
