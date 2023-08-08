@@ -5,9 +5,11 @@ stdenv.mkDerivation {
     src = ./.;
     buildInputs = [
       nodejs
+      yarn
     ];
     installPhase = ''
-      npm install --verbose
+      export HOME=$(pwd)
+      yarn
       touch $out
     '';
 }
