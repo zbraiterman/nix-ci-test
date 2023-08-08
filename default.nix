@@ -7,7 +7,8 @@ stdenv.mkDerivation {
       nodejs
     ];
     installPhase = ''
+      export HOME=$(pwd)
       npm install
-      cp -R *.js $out
+      touch $out
     '';
 }

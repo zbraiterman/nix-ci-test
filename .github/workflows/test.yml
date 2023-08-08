@@ -11,4 +11,4 @@ jobs:
         with:
           nix_path: nixpkgs=channel:nixos-unstable
       - run: nix-build
-      - run: nix-shell --run "node hello.js"
+      - run: nix-shell --run "npm run test"
